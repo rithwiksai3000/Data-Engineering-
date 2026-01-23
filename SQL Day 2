@@ -1,0 +1,27 @@
+Raw Data -> Info : Data has a story to tell
+We data engineers give voice to data.
+Role : Understand the data and the story it tells.
+
+Data Engineer : Involves bulding systems and pipelines to Collect , store and analyze large volumes of data for downstream.
+
+ML: Learn data patterns
+Pipelines: Devops and Data Governance
+Governance : Dont put private data as public
+Quality checks and Unit Checks
+Devops : CI/CD
+
+ETL : Extract Transform Load : Informatica , Data Stage
+
+
+Data Engineering Life Cycle
+
+1. Data Collection : Gather data from various sources
+   Data Sources : Databases: Postgres , Mysql (structured) 
+                : APIs : Rest Apis            (semi struct)
+                : Files : CSV , Json , Xml    (Unstructured)
+
+2. Ingestion : Moving data into centralized storage
+   ETL / ELT : Pipelines : Parallel Processing Computation
+   E: Store Raw Data into Warehouse
+   L: Loading into DB
+   T: Transform or apply business Rules
