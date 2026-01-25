@@ -1,1 +1,55 @@
+Date: 1/20/2026
 
+Data stored in form of schema ( how the tables look like)
+4 Types: Tables , views , stored procedures , functions
+
+SQL: Communication tool with the database , 
+-> DDL , DML , DQL , DCL , TCL 
+
+DQL : Data Query Lang              : Retreive Data             : Select
+DDL : Data Definition Lang         : Define Structure          : Create , Alter , Drop
+DML : Data manipulation Lang       : Modify Data               : Insert , Update , Delete
+DCL : Data Control Lang            : Contol Access             : Grant , Revoke
+TCL : Transaction Control Lang     : Manage Transaction        : Commit , Rollback
+
+Create Table company_db.test_table
+(   id int
+    name varchar (100)
+);
+
+select id from company_db.test_table;
+
+
+Insert into company_db.test_table( id , name)
+values (1, 'HK') , (2, 'PK') , (3, 'SK');
+
+Insert into company_db.test_table( id, name)
+values(5 , 'XYZ');
+
+# Alter Table 
+
+primary key : Referenced table , Referencing table(college)
+Foreign key: (SSN is FK in college & Pk in people)
+
+FK (person ID) , References Persons(ID)
+
+--> On delete restrict 
+--> On update cascade --> change in data in one table , then also change the data in 2nd table.
+
+
+--> Not null , unique , Pk , Fk
+--> Check , Default
+--> Drop table , delete table , Truncate
+--> Drop table: Delete data and table
+--> Delete Table: Used with Where clause
+--> Truncate: DML , DDL , DQL 
+
+---> Cardinality: one to one , one-many , many to one , many to many 
+CRED
+
+--> Only one PK per entry 
+
+
+
+
+ 
