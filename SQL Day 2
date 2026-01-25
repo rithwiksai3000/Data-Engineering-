@@ -25,3 +25,20 @@ Data Engineering Life Cycle
    E: Store Raw Data into Warehouse
    L: Loading into DB
    T: Transform or apply business Rules
+
+3. Processing : (1 gb - 100gb) , (1 day - 1 yr)
+
+4. Storage : RDBMS , Data Lakes , Data Warehouse ( large storage units) 
+
+5. Analysis
+
+6. Consumption
+
+ETL Pipeline Orchestration : Using Airflow to schedule and manage tasks.
+
+CI/CD Pipelines: Using github actions
+
+
+
+Data from Different Sources ---> Data Lake -(ETL)-> Curated Layer -(Spark)-> Warehouse ---> Reports 
+
