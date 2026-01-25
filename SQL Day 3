@@ -1,1 +1,67 @@
+Date: 1/16/2026
+
+Hadoop vs Spark 
+
+Hadoop and Apache Spark are two of the most popular distributed processing frameworks
+
+Hadoop architecture: HDFS and Map & Reduce
+
+HDFS ( Hadoop Distributed File System ) ----> Master slave archi
+Eg: 1 gb file HDFS , distributed in multiple files of small parts ( 100mb)
+To facilitate all these nodes , HDFS uses Yarn architecture
+Uses name node and data node ---> Holds meta data of file
+
+
+Mao & Reduce : Map gives the count od each word like NLP , and Reduce increases the count if the word repeats
+
+Map : x= x^2 , if x=[1,2,3,4,5] ,
+then o/p = [1,4,9,16,25] ---> Mapping o/p to get list of values
+
+Reduce: [1,2,3,4,5]
+X= Sum() , 
+then X=15 , reduce the value to get single output
+
+
+
+      Map               ----->
+----> Map --->  Compute -----> Single output
+      Map               ----->
+
+-> These are Time Taking tasks
+
+To overcome this drawback , we came up with spark architecture.
+
+Spark--> Unified in memory operation (RDD)
+Also contains HDFS
+
+1. Driver Program: Coordinates tasks and manages job execution 
+                 : Every compute occurs in RAM memory
+                 : Processing time is reduced
+2. Cluster Manager: Allocates resources ( Yarn , Kubernetes)
+
+3. Executors : Worker Processors that execute tasks and cache data in the memory
+-> Spark uses RDD( Resilient Distributed Databases) for fault tolerance in memory data storage
+
+
+
+                         Hadoop(Disk Based)                   Vs                       Spark( RDD Based) 
+
+Data Storage        Stored and Processed from disk                                   Stored temporarily in RAM
+
+Results            Written to disk after after each stage                            Kept in memory untill needed
+
+PErformance        Slower due to disk I/O                                            Faster in memory caching
+
+Fault Tolerance   Replication Based
+
+
+Data Governance and Security : Data Lineage , Data cataloging , MAsking and encryption
+
+Data Quality and Testing : Validation , great expectation , unit testing
+
+Data Visualization and Reporting : Power BI and Tableau 
+
+Use flask and API for data delivery
+
+
 
