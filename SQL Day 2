@@ -42,3 +42,5 @@ CI/CD Pipelines: Using github actions
 
 Data from Different Sources ---> Data Lake -(ETL)-> Curated Layer -(Spark)-> Warehouse ---> Reports 
 
+Sub parts of Data warehouse is called data marts
+
