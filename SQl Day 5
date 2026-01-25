@@ -1,1 +1,50 @@
+Date: 1/22/2026
+
+Count & Distinct Count
+Filtering using where 
+Limit
+And
+OR
+Order by desc , asc by default
+not , not in (6,7,3) multiple , != (not) , <>(not)
+
+Where , and , or combination 
+
+2 wild cards with like (% , - )
+Like [ %AA , S%A , _s_a_% , s___%]
+
+In Mysql --> not case sensitive
+In SQL server : case sensitive
+"_' (underscore) is also a character
+
+NULL
+Between ( from & to ) --> dates mostly
+Checking for duplicates : group by (grouping by category & then apply filter) -> Having
+Similar to where 
+
+Whatever cols we select must be included in the group by clause
+Alias
+
+Order of execution : From(table) --> Join --> Where --> Group by --> Having --> Select --> Order by ---> Limit
+
+
+** Where condition is applied on all records ( record level or row level)
+** Having condition is applied on groupby ( aggregated data) , then having i sused for filtering
+
+Sum function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
