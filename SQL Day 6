@@ -2,3 +2,69 @@ Date : 1/24/2026
 
 Interact with String Data types
 
+select title , RPAD(title, 20 , '*' ) as left padded
+from sakila.film
+limit 5
+// Indicates the title must be 20 letters long , for titles < 20 , add '*' to mak eit 20 chars long
+Rpad --> adds padding to the right end of the word
+Lpad --> adds padding from the left of the word
+
+# substring
+select title, substing(title , 3, 9) as short_title
+from sakila.customer
+// queries a substring from 3rd char to 9th char
+
+# Concatination
+select concat(first_name , '@' , last_name ) as full_name
+from sakila.customers
+
+# Reverse
+select title , reverse(title) as Reversed_title
+from sakila.film
+limit 5
+
+# Length
+select title, length(title) as title_length
+from sakila.film
+where length(title)= 8
+
+# Substring with Locate
+select email , substring(email , locate('@',email)+1) as domain
+from sakila.customer
+
+select email , sub_string_index(substring(email, locate('@',email)+1),
+from sakila.customer ,
+--> instead of @ , we can use '.' or -1 as domain , 
+-1 indicates the direction : +1 is beofre @ and -1 is after @.
+
+--> Used to fetch the domain name before of after the locate @
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
