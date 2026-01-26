@@ -41,6 +41,13 @@ from sakila.customer ,
 
 
 
+# Upper() and lower() : Converts the strings into upper case and lower case sequence
+
+# Starting and ending with vowels
+# Built in functions of math and dates
+
+
+
 
 
 
