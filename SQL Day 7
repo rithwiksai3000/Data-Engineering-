@@ -1,1 +1,134 @@
 Date : 1/26/2026
+
+Topic : Subqueries
+
+Sql we follow concept of normalization and split data from one table to multiple tables and then use PK and FK to assign relation among the tables.
+Cardinality
+
+Subqueries: inner queries 
+-> Where clause
+-> Select stmt
+-> create a table using subquery , derived table
+-> co related sub queries
+
+1.  Bring data from other tables
+Eg: select first_name , last_name 
+    from sakila.customer
+    where address_id in (
+    select address_id 
+    from sakila.customer
+    where customer_id =1 );
+
+#. select first_name , last_name 
+    from sakila.actor
+    where actor_id in (
+    select actor_id 
+    from sakila.film_actor
+    group by actor_id
+    having count(film_id)>10
+   );
+
+# So here instead of joining the table , we use the subqery to query the count from film_actor table and then pass that o/p into our query.
+
+
+2. Wrting subquery within select stmt
+
+   select actor_id , first_name , last_name
+   ( select count(*) 
+     from sakila.film_actor
+     where film_actor.actor_id = actor.actor_id
+   ) as film_count
+   from sakila.actor ; 
+
+
+3. Derived Table
+   select a.actor_id , a.first_name , a.last_name
+   from sakila.actor a
+  join (
+        select actor_id , count(film_id) as film_count
+        from sakila.film_acot
+        group by actor_id
+        having count(film_id)>10
+        ) fa 
+   on a.actor_id = fa.actor_id;
+
+# Writing multiple subqueries create confusion and increases the complexity 
+
+
+# Using case stmts
+  A temp table is created at run time
+
+
+# Ambiguity condi
+select first_name ,
+       ( select address_id from sakila.address , where district = 'California' limit 1 ) as cali_address
+from sakila.customer;
+
+Because we have multiple address values for one single person which is not possbile
+So to achieve the desired o/p we use joins.
+
+4. Corelated queries
+   Trying to relate to something
+select title,
+( select count(*)
+  from sakila.film_actor fa
+  where fa.film_id = f.film_id) as actor_count
+from sakila.film f
+
+Here the col from film f, is already being accessed in the subquery , so my subquery has a refence of the col outside of its scope , so we are referring a col of main tbale in the sub query : Hence this is a correlated sub query.
+# Reusing subqueries will increase the execution time
+# to handle this we can use CTEs and Views
+
+We can establish 4 cardinality relationships btw Pk and Fk tables
+-> one to one : each record of first table relates to only one record of second table  ( user to user status , either the user is active or inactive)
+-> one to many : a user will place multiple orders , multiple order_ids map to single user 
+-> many to one : now many orders are place by one customer ( just reverse of the above)
+-> many to many : best example is friends , mutual frnds
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
