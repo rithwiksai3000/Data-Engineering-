@@ -1,2 +1,70 @@
 Date: 01/29/2026
+Joins
+
+1. Inner Join
+To fetch common records btw 2 tables , table A has Pk reference and B has FK reference
+Result : Only the common details btw A&B
+A -> Left Table
+B-> Right Table
+
+
+2. Left Join
+Results : All records of left table and the common cols btw A & B
+Film and film category and category ,  customer and rental 
+
+
+3. Right Join 
+Results : All records of right table and the common cols btw A & B
+
+
+
+4. Full Outer Join
+Result : Fetch all records from A , B and also the common cols
+
+
+
+5. Full outer join with A.key or B.key is Null
+Results: Only cols of A& B , but not the common cols
+
+
+
+6. Cross Join or Cartesian Join
+We apply a cartesian product
+3 Records in Table A , 3 Records in Table B 
+Then the result will have 3*3 = 9 results.
+
+
+7. Self Join
+Staff table
+
+
+
+--> Normalization Concepts
+--> Union
+--> Where exists
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
