@@ -10,11 +10,36 @@
 
 3.
 
-4.
+4.  For Month :  SELECT c.first_name , p.customer_id, MONTHNAME(p.payment_date) AS month, SUM(p.amount) as Total_amount
+                 FROM sakila.payment p
+                 join sakila.customer c
+                 on c.customer_id = p.customer_id
+                 GROUP BY customer_id, month;
+
+
+
+   For Year : SELECT c.first_name , p.customer_id, YEAR(p.payment_date) AS year, SUM(p.amount) as Total_amount
+              FROM sakila.payment p
+              join sakila.customer c
+              on c.customer_id = p.customer_id
+              GROUP BY customer_id, year;
+
+
+   For Week : SELECT  c.first_name ,p.customer_id, WEEK(p.payment_date) AS week, SUM(p.amount) as Total_amount
+              FROM sakila.payment p
+              join sakila.customer c
+              on c.customer_id = p.customer_id
+              GROUP BY customer_id, week;
+
+
+
+
+
+
 
 5. SET @test_date = 'xxxx-xx-xx';
 
-SELECT 
+   SELECT 
     YEAR(@test_date) AS Year,
     CASE 
         WHEN (YEAR(@test_date) % 4 = 0 AND YEAR(@test_date) % 100 != 0) 
@@ -22,9 +47,27 @@ SELECT
         ELSE 'Not a Leap Year'
     END AS Status;
 
+
+
 6.
 
-7.
+
+
+7. SELECT 
+    payment_date,
+    CASE QUARTER(payment_date)
+        WHEN 1 THEN 'Q1'
+        WHEN 2 THEN 'Q2'
+        WHEN 3 THEN 'Q3'
+        WHEN 4 THEN 'Q4'
+    END AS quarter_description
+  FROM  sakila.payment;
+
+
+
+
+
 
 8.
+
 
