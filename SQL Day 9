@@ -1,2 +1,91 @@
 Date: 2/2/2026
 
+CTE ( Common Table Expression)
+
+with cte_name as (col names)
+(
+  select ---
+  from ----
+  where ----
+)
+
+We also write multiple CTE's 
+
+Reusabality and Redability
+
+Also need to write valiation script
+Specific logic to verify the answer for the question
+
+The scope of query (CTE) is at the query level.
+
+But we want o use it at the session level. So to overcome this
+We use a temporary table.
+It only exists for the session or untill explictly dropped
+Useful for storing intermediate results or testing transformations without affecying actual data
+
+create temporary table sakila.table_name as 
+select ----
+from----
+join---
+join ----
+group by ---
+order by ----
+limit---;
+
+--> Now we can query tform this temp table
+
+select *
+from temp_table_name
+and filters
+
+
+Views : Virtual Tables
+Will help simplifying complex queries , data abstraction and security
+Helps with data secruity(abstraction)
+
+create or replace view sakila.view_name as 
+
+
+We use alias for orignal col names and only show the names which we define.
+So it maintains confidentiality of the col names
+
+The output if the view , the data is not stored , only the query is being stored
+Data not being stored, only its schema is being stored
+
+Subquery ---> CTE----> Temp Table ----> Views
+(Evolution) 
+Eg: Health care data or SSN info we use views
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
