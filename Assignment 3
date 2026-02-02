@@ -1,0 +1,56 @@
+Date: 01/29/2026
+
+1.  SELECT c.*
+    FROM sakila.customer c
+    JOIN sakila.payment p ON c.customer_id = p.customer_id
+    GROUP BY c.customer_id
+    HAVING COUNT(p.payment_id) > 5;
+
+2.  SELECT a.first_name, a.last_name
+    FROM sakila.actor a
+    JOIN sakila.film_actor fa ON a.actor_id = fa.actor_id
+    GROUP BY a.actor_id
+    HAVING COUNT(fa.film_id) > 10;
+
+3.   SELECT c.first_name, c.last_name
+     FROM sakila.customer c
+     LEFT JOIN sakila.payment p ON c.customer_id = p.customer_id
+     WHERE p.payment_id IS NULL;
+
+4.   SELECT title, rental_rate
+     FROM sakila.film
+     WHERE rental_rate > (SELECT AVG(rental_rate) FROM sakila.film);
+
+5.  SELECT f.title
+    FROM sakila.film f
+    JOIN sakila.inventory i ON f.film_id = i.film_id
+    LEFT JOIN sakila.rental r ON i.inventory_id = r.inventory_id
+    WHERE r.rental_id IS NULL;
+
+6.  SELECT DISTINCT c.customer_id, c.first_name, c.last_name
+    FROM sakila.customer c
+    JOIN sakila.rental r ON c.customer_id = r.customer_id
+    WHERE DATE_FORMAT(r.rental_date, '%Y-%m') IN (
+       SELECT DISTINCT DATE_FORMAT(rental_date, '%Y-%m')
+       FROM sakila.rental
+       WHERE customer_id = 5
+     ) AND c.customer_id <> 5;
+
+
+7.  SELECT DISTINCT s.first_name, s.last_name
+    FROM sakila.staff s
+    JOIN sakila.payment p ON s.staff_id = p.staff_id
+    WHERE p.amount > (SELECT AVG(amount) FROM sakila.payment);
+
+8.  SELECT title, rental_duration
+    FROM sakila.film
+    WHERE rental_duration > (SELECT AVG(rental_duration) FROM sakila.film);
+
+9.  SELECT first_name, last_name
+    FROM sakila.customer
+    WHERE address_id = (SELECT address_id FROM sakila.customer WHERE customer_id = 1)
+    AND customer_id <> 1;
+
+10. SELECT *
+    FROM sakila.payment
+    WHERE amount > (SELECT AVG(amount) FROM sakila.payment);
