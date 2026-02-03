@@ -21,7 +21,7 @@ The scope of query (CTE) is at the query level.
 But we want o use it at the session level. So to overcome this
 We use a temporary table.
 It only exists for the session or untill explictly dropped
-Useful for storing intermediate results or testing transformations without affecying actual data
+Useful for storing intermediate results or testing transformations without affecting actual data
 
 create temporary table sakila.table_name as 
 select ----
@@ -32,7 +32,7 @@ group by ---
 order by ----
 limit---;
 
---> Now we can query tform this temp table
+--> Now we can query form this temp table
 
 select *
 from temp_table_name
