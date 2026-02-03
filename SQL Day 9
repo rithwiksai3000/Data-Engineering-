@@ -16,9 +16,12 @@ Reusabality and Redability
 Also need to write valiation script
 Specific logic to verify the answer for the question
 
-The scope of query (CTE) is at the query level.
 
-But we want o use it at the session level. So to overcome this
+Limitations: 
+-> The scope of query (CTE) is at the query level.
+-> And it should always be followed by a select command ,
+
+But we want to use it at the session level. So to overcome this
 We use a temporary table.
 It only exists for the session or untill explictly dropped
 Useful for storing intermediate results or testing transformations without affecting actual data
@@ -56,6 +59,7 @@ Subquery ---> CTE----> Temp Table ----> Views
 (Evolution) 
 Eg: Health care data or SSN info we use views
 
+ 
 
 
 
