@@ -1,5 +1,93 @@
 Date: 02/03/2026
 
+Stored Procedures
+
+Why do we write function ? For code reusability
+
+stored procedure is like  a function we use while coding
+
+Create procedure name () ----> Takes 2 params , input param(explicitly define it while calling the func)  and output param (store the value)
+begin
+   select ------
+   from  ----
+   where ----
+   / filters ----
+
+end;
+
+Calling a stored proce
+: call procedure_name() 
+
+
+Eg: 
+
+Delimiter // ----> Syntax to just seperate the code for redability so that we understand that this is a stored procedure , we use this to differentiate btw multiple stored procedures or code chunks
+create procedure sakila.TotalPaid(IN cid INT , OUT total Decimal(10,2))
+    begin
+   set @s = concat('Select count(*) as total_rows from ', tbl_namr
+   prepare  stmt from @s;
+   execute stmt ;
+   deallocate prepare stmt ;
+   end;
+//  ---->   we use this to differentiate btw multiple stored procedures or code chunks , end with //
+
+
+
+
+
+
+//
+
+***   Dynamic SQL Procedure ****
+
+create procedure sakila.DynamicQuery ( In tbl_name varchar(64))
+ begin
+   set @s = concat('Select count(*) as total_rows from ', tbl_name);
+   prepare  stmt from @s;
+   execute stmt ;
+   deallocate prepare stmt ;
+   end;
+
+//
+
+
+
+
+Calling :  --->  call sakila.GetCustomerPayments (7);
+           --->  call sakila.TotalPaid(6 , @total) ; select @total ;
+           --->  call sakila.DynamicQuery(sakila.payment);
+
+** We can use stored tables to create multiple queries at once **
+
+Meta data = information schema ( all info of tables , pks , fks)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
