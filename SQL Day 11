@@ -1,0 +1,117 @@
+Date: 02/04/2026
+
+Indexing
+
+A clustered index determines the physical order of data rows in a table. In Mysql , the primary key is always a clustered key
+
+A non clustered index is a seperate structure from the actual table data.
+
+When we dont do indexing , our query scans all the records, but due to indexing our search universe reduces significantly
+
+Indexing: Optimizing Query and Cost
+
+And what if i dont have a col for PK?
+SO to overcome this we have non clustered index.
+We can create multiple non clustered indexes , but only 1 clustered index.
+On the non primary key , we create index cols on physical table and assign pointers it will not sort or filter the data.
+
+
+** Natural Key and Surrogate Key ***
+AAdhaar , SSN by nature identify the person , but an employee id or roll no is just representing you only fornthat moment and it can be assigened to another person , but here ssn identifies onlu you either now or in future.
+
+So we can say aadhaar and ssn ---> Natural Keys ( by nature its unique , will not be reassigned to someone else)
+Roll no , ids ----> Surrogates keys ( can be reassigned to another person)
+We can by default rely on primary /natural keys
+
+Surrogate , Natural , Primary , Foreign Key , Unique 
+Fine Tuning
+
+1. Use only necessary cols ( aviod select *)
+Reduces computation
+
+2. Use where before group by and Having 
+
+3. Use joins instead of suqueries 
+  Subqueries are less efficient
+
+4. Aviod functions on idexed columns
+select * from rental where year(rental_date) = 2005 is not efficient as it scans all the rows and then fetches the record 
+Instead we can use : select * from rental where rental_year btw 1/1/2005 and 31/12/2005 , it scans only 365 records and fetches the data
+
+5. Use limit
+
+6. 
+
+7. Use CTE
+
+8. Explain and understand query execution plan
+
+9. Maintenance commands ( run periodically)
+
+10. Aviod large OFFSETs in pagination
+Inefficient: select * from payment limit 1000,10 ;  But here we start our seach from 1st record  then from 1000 record we fetch the next 10 records.
+
+Efficient: select * from payment where payment_id> 1000 , limit 10;  : Here we start search from 1000 entry and finish the search after 10 records
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
