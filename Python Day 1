@@ -1,0 +1,16 @@
+Date: 02/05/2026
+
+Intro to Python
+
+Python is a high level , dynamically typed programming lang. 
+Python code is said to be almost like a pseudocode , since it allows to express powerful ideas in few lines of code .
+
+print("Hello Joeyyyy!")
+
+--> Versatility snd easily intergrated with APIs 
+--> Different libraries : Pandas , Matplotlib , seaborn , scikit learn , pytorch 
+
+
+Data Types:
+
+Integers
