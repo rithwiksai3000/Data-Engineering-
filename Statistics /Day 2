@@ -1,1 +1,107 @@
+PDF : Probability Density Func : Prob of occurance of different possible outcomes in an exp can be calculated.
+If the prob of an event is higher , its more likely thst the event will occur.
+
+Every outcome has a prob score. 
+Eg dice , getting 5 or 3 = 1/6
+Prob for coin toss for tail : 1/2 or 0.5
+
+Normal Distri : Normally distributed with bell curve  , upward curve like protractor 
+Dstir where all the putcomes ahve equal prob
+
+Rule: 68-95-99.7 : Eg: ther eis a 68% of students who lie in 60-80% range  and then 95% of people fall btw 2nd sd btw 50-90 and 99.5 of ppl btw 40-90 range (3rd std dev)
+
+
+Uniform Distri : Like a linear ditri , proper structure and step size with proper interval , 
+When we generate a random num btw a range and have equal possiblity of outcomes is uniform distri.
+
+
+We find data as continous data 
+
+
+Bernouliis distribution: We have discrete data which gives discrete output , only a single o/p value as 1 or 0 , exp performed only once
+Tossing a coin
+plotting this kind of exp : 
+
+--> Whe nwe try to find o/ps of independent Bernoullis trials like tossing a coin 100 times and cal prob of getting heads or tails , so pointing thiese outcomes on graph is bernoullis distribution data.
+Eg: patients in hospital , suffer from a disease , 75% die of it and what is prob of picking 6 people , 4 will recover?
+
+c4,6 = (.25)^4 (.75)^2
+
+
+Poission Distribuition : no of events occuring in fiexed interval of time or space
+Eg: How many no of call made per hour , how many in 1st hr , 2nd hr and 3rd hr
+Eg: How many ppl visit a website  per day , per hr or per week 
+
+Variance in data: 1,8,44,100,777,4,99,1,5555 
+Here we can see huge variance in data , i deal expectation is single digit numbers , but have  2,3 digit numbers also
+
+Bias: 2 classes , diabetes ( 60 samples) , no diabetes(1000 samples)
+
+if we train model with these samples , my model will predict data as no diabetes , as we have so many samples of no diabetses, so model will be biased in predicting as no diabetes
+
+
+So now based on skewness and type of distribution we try to fill in the missing values in the dataset.
+
+Pearsons correlation coefficient : Helps to find relatioship btw 2 quantities , it gives the measure of strength of association  btw two variables. rnages from -1 to 1 . 1 means high correlation and 0 means no correlation
+
+Correlation: which direction does y change for a unit change in x ? same direction or opposite direction ?
+
+Covariance : is there any change in y for a change in x? 
+
+When there is multi collinearlity btw many variables , we plot a heat map to find it and handle them.
+
+scaling factor
+
+Next we perform Feature Engineering : Do we need all feature or do all features contribute to my model or what n=features do i need for the model and how will each feature impact the model 
+
+Next step is cross validation : Test , train datasets 
+Methods: supervised and unsuperivsed
+This all in case of classification model
+
+
+
+
+
+
+
+
+And for regression we use different methods:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
