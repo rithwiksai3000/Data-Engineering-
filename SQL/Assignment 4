@@ -1,0 +1,49 @@
+1) SELECT c.customer_id, c.first_name, c.last_name, f.title as Film_Rented 
+FROM customer c 
+LEFT JOIN rental r 
+ON c.customer_id = r.customer_id LEFT JOIN inventory i 
+ON r.inventory_id = i.inventory_id 
+LEFT JOIN film f ON i.film_id = f.film_id;
+
+2) SELECT c.first_name, c.last_name, COUNT(r.rental_id) AS rental_count
+FROM customer c
+LEFT JOIN rental r ON c.customer_id = r.customer_id
+GROUP BY c.customer_id;
+
+3) select f.title, c.category_id as category_id, rc.name as category_type   
+from film f
+left join film_category c on f.film_id = c.film_id 
+left join category
+rc on rc.category_id = c.category_id;
+
+4) SELECT c.email AS customer_email, s.email AS staff_email
+FROM customer c
+LEFT JOIN staff s ON c.email = s.email
+UNION
+SELECT c.email, s.email
+FROM customer c
+RIGHT JOIN staff s ON c.email = s.email;
+
+5) SELECT a.first_name, a.last_name 
+FROM actor a 
+INNER JOIN film_actor fa ON a.actor_id = fa.actor_id 
+INNER JOIN film f ON f.film_id = fa.film_id 
+WHERE f.title = 'ACADEMY DINOSAUR';
+
+6) select sr.store_id as Store, count(sf.staff_id) as total_working_staff 
+from sakila.store sr 
+left join sakila.staff sf 
+on sr.store_id = sf.store_id 
+group by str.store_id;
+
+7) select c.first_name, c.last_name, count(r.customer_id) as rental_count 
+from customer c 
+inner join sakila.rental r 
+on c.customer_id = r.customer_id 
+group by c.customer_id 
+having count(r.customer_id)>5;
+
+
+
+
+
