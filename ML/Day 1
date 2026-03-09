@@ -1,0 +1,196 @@
+Linear Regression
+
+Supervised and unsupervised and semi supervised types of models
+Renforcement learning : reward the model for correct inputs and for wrong outputs it gets a pentalty via human input.
+Eg: Tesla super cars
+
+Supervised learning: Regression based models and classification based
+Regression : Predict continuous values (linear)
+Classification: try to classify something on a labelled class (logistic)
+
+Linear regression : We have dependent and independent variable and build a relationship with these and make a line expression y=mx+c
+
+
+
+Life cycle of an ML model:
+
+
+start -> Data selection from multiple sources -> data description(story of data and the features)
+-> performing both statistical and graphical data analysis
+-> data transformation and derivation of new attributes
+-> selection of ML algo 
+-> data standarization and normalization
+-> creation of train and test data sets using optimum parameters
+-> model training using ML algo tested above
+-> calculation of accuracy of both train and test data
+-> hyper param tuning to achieve a better accuracy
+-> saving the model file
+-> depolyment : Live stream or batch or mini batch
+-> production deployment and testing
+-> finalizing the retraining approach
+-> logging and monitoring (audit tables)
+-> dashboard for monitoring and logging reports   -> Stop
+
+Dependednt var : Target variable
+Regression is a process of predicting label ( or dependent var) based on features (independent vars)/ It is used for time series modelling anf finding casual effect relation btw variables and forecasting.
+Here we fit a curve /line to the data points in such a manner that the differnces btw the distance of the actual data points from the plotted line of curve is minimum ( closet to best fit line) .
+Residual : distance btw actual data points to best fit lines
+
+We need to train ML model so that it reduces the distance btw best fit line and the data points. 
+
+Losss func: means squared error , rmse (root mean sq error)
+Cost func and gradient descent will also be introduced
+
+
+Use of regression:
+-> Analyze relationship btw two or more features
+-> varibality of of dependent with independent variable
+-> shows impact of multiple vars on indepedent vars
+-> can also measure these effects even if vars are on different sales
+
+
+A linear reg model predicts the dependent var using regression line based on indenpenedt vars . the equation of the linear reg is : Y= a+ BX + e
+
+Gradient descent : to acheive the minial residual (distance btw data points and the best fir curve)
+
+Global minima  and global maxima 
+Local minima and local maxima
+Epocs:
+
+Accuracy of model: 
+R^2 stats: How much of our data is being explained by out model ?
+if r^2 is .75 , then our model fits 75% of the total dataset.
+
+TSS: Total sum of square  RSS(Residual sum of sq) + ESS(Explained sum of error)
+
+RSS = .75 ,
+ESS = .25
+Tss = 1.0
+
+Issue with R^2 : if we increase no of independent vars in the equation the residual(R^2) will also increase but that doesnt mean that indepedent vars will have any relation with depedent var.
+So handle this shoot up we rectify this with adjusted R^2 , which penalizes excessive use of these independent vars
+Regularization : Lasso , Elastic and ridge make independent features less important
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
