@@ -1,0 +1,73 @@
+Regularizations: When we have multiple features or independent vars
+
+Multi Collinearity: Pearson corr we plot 
+If we have high corr:
+-> do nothing
+-> Remove one var
+-> Combine both vars
+
+Bias: Biased towards one class ( major data on either of dog or cat )
+So if we show a cat image the model might predict it as Dog
+
+Variance : range of data
+Eg: Salaries majorly uotp 5 lakhs , and some with 10+ lakhas and few with 20+ and very few with 30+
+
+Best model: Low bias and low variance
+Bias variance trade off , we need to maintain low bias and variance so model doesnt get over fit
+
+When we use regression models to train data , the model will overfit , to overcome this we use Regularization
+Here in linear equation we do not want huge weights/coeffs
+
+-> Lasso : penalizses where there are weights , we introduce lambda
+-> Ridge: Penalize more in strict way 
+
+ridge sherinks coeffs to almost zero , but never 0.
+We use lasso for feature selection
+
+-> Elastic net : combo of lasso and ridge
+
+
+
+Why Regularization? 
+To reduce variance of model , without substantial increase in bias.
+
+
+
+
+Polynomial Regression:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
