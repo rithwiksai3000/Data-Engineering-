@@ -1,0 +1,81 @@
+Logistic Regression
+
+Sigmoid function : makes sure that values btw 0-1 .
+Threshold : as we have multiple values in the range of 0-1 , we use a threshold , above this we consider as snot spam , and everything below this threshold is spam 
+It can be 0.4 or 0.5 and its fixed
+
+Use case: To classify categorical data into two labels
+
+If we have multiple classes like 0,1,2 , we use softmax function it calculates probs of indivudal level and on top of it we apply throshold label
+
+eg: 3 classes : A,B,C
+z=[2.1,1.3,0.7]
+z=[0.63,.28,.009] = 1 > total sum of prop of all class labels =1
+z= highest --> class label
+
+Evaluation :
+
+Confusion Matrix: Predicted vs Actual values ground truth 
+TP , TN , FP , FN
+
+If we get more FP , FN then we try wit hdifferent models and get the best model with least values of FP and FN
+
+Accuracy : TP+TN / (TP + TN + FP + FN) : Correct predictions / Total Predictions
+
+Recall : TP / (TP + FN) , out of all postive values , how many are actually predicted positives?
+
+Precision:  TP / (TP + FP)  , among all positive predictions how many are actual positives ? 
+
+Potential problem : We have high accuracy , but have very low values for recall and precision
+
+F1 score: We need a metric which considers both precision and recall for evaluation a model 
+A harmonic mean of precision and recall is the F1 score.
+
+This score tells how the model acutally performed
+
+
+How do we come up with the treshold value?
+ROC Curve ( Receiver Operator Charteristics): it represents various confusion matrices for various thresholds
+Curve for Sensitivity vs 1-specificity
+Precision = Specificity
+
+FP rate : 1- specificity
+
+a point where TP is high and FP is low will be a threshold value
+
+AUC ( Area Under Curve): Which model covers the maxnimum area , that is considered a best model
+We take roc curves of all the models and check which modles curve covers the max area.
+
+Which model to choose? Plot AUC curve and the model which cover more area is the best model.
+
+Multi class and multi label classification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
