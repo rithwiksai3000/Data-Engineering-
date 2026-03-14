@@ -52,6 +52,56 @@ Multi class and multi label classification
 
 
 
+--------------------------------------------------------------------------------------------------------------------------------
+
+1. Fundamentals of Logistic Regression
+Purpose: Used to classify data into categorical labels (primarily binary).
+Sigmoid Function: Maps any real-valued number into a range between 0 and 
+1.Formula concept: $1 / (1 + e^{-z})$
+Threshold: A fixed value (e.g., 0.4 or 0.5) used to convert probabilities into distinct classes
+Example: If Threshold = 0.5; Value $\geq$ 0.5 is "Not Spam", Value $<$ 0.5 is "Spam".
+
+
+
+2. Multi-Class Classification (Softmax)
+Softmax Function: Used when there are more than two classes (e.g., A, B, C)
+.Mechanism: It calculates the probability for each individual label.Key Rule: The sum of all output probabilities must equal 1.
+Decision: The class with the highest probability is chosen as the final label
+
+
+3. The Confusion MatrixUsed to compare Predicted values against Actual ground truth.
+TP (True Positive): Predicted Positive, Actually Positive.
+TN (True Negative): Predicted Negative, Actually Negative.
+FP (False Positive): Predicted Positive, Actually Negative (Type I Error).
+FN (False Negative): Predicted Negative, Actually Positive (Type II Error).
+
+4. Evaluation Metrics
+Accuracy: $\frac{TP + TN}{Total Predictions}$. (Can be misleading if classes are imbalanced).
+Recall (Sensitivity): $\frac{TP}{TP + FN}$. Measures how many actual positives were captured.
+Precision: $\frac{TP}{TP + FP}$. Measures how many predicted positives were actually correct.
+F1 Score: The Harmonic Mean of Precision and Recall. It is the best metric when you need a balance between the two.
+
+
+
+
+5. Threshold Selection & Model Comparison
+ROC Curve (Receiver Operating Characteristics)A plot of Sensitivity (TPR) vs. 1-Specificity (FPR).It represents various confusion matrices across different thresholds.
+Goal: Find the "elbow" or the point where TP is high and FP is low.
+
+AUC (Area Under Curve)Used to decide which model to choose.
+The model with the maximum area under its ROC curve is considered the best performer.
+
+6. Classification Types
+Binary: Two mutually exclusive classes (Yes/No).
+Multi-class: More than two classes, but each instance gets only one label (e.g., classifying an image as a Cat, Dog, or Bird).
+Multi-label: An instance can be assigned multiple labels simultaneously (e.g., a news article being tagged as both "Politics" and "Finance").
+
+
+
+
+
+
+
 
 
 
