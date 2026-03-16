@@ -1,0 +1,64 @@
+Boosting Techniques
+
+Weak Classifier : Why Tree?
+Pros and Cons 
+
+
+Ada Boosting
+Issues with ADa boosting
+
+Gradient Boosted Trees
+Draw bacls for gradient descent
+
+XG Boost
+Light GBM
+Cat Boost
+
+Till here all models we discussed are supervised ML models.
+
+
+Now we discuss about Unsupervised.
+Clustering 
+
+K Means Clustering
+
+Elbow Method
+
+Hierarchial Clustering
+Dendograms
+
+DBSCAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
