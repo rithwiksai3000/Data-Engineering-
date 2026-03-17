@@ -74,9 +74,20 @@ Why it's superior for real-world data: It doesn't force every point into a clust
 The Logic: It starts with a random point; if there are enough neighbors within Epsilon, a cluster is born. It then recursively adds all "density-reachable" points.
 
 Summary Table: When to use what?
-Scenario	Recommended Model
-High Accuracy needed on tabular data	XGBoost / LightGBM
-Data has lots of Categories (Strings)	CatBoost
-Grouping customers into N fixed segments	K-Means
-Finding clusters of odd shapes/Finding outliers	DBSCAN
-Need to see the "Genealogy" or hierarchy	Hierarchical
+
+            Scenario	                                           Recommended Model
+
+High Accuracy needed on tabular data	                          XGBoost / LightGBM
+Data has lots of Categories (Strings)	                              CatBoost
+Grouping customers into N fixed segments	                            K-Means
+Finding clusters of odd shapes/Finding outliers	                    DBSCAN
+Need to see the "Genealogy" or hierarchy	                         Hierarchical
+
+
+
+
+
+
+
+
+
