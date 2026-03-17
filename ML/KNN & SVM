@@ -1,0 +1,138 @@
+KNN : K Nearest Neighbours
+
+KNN Intuition : You are the average of 5 people you spend the most time with.
+
+Suppose we have a dataset : IQ | CGPA | Placement and based on IQ and GPA we predict whether the candidate is placed or not 
+
+We decide a value of k , means we consider 3 nearset neighbours.
+
+We get a query point , we know his iq and gpa , now predict whether hes placed or not.
+
+
+In knn , for the given query point , we take the euclidean distance from all points to the query point.
+100 distacnes caluclated , one for each point and sort them in ascending order. And thr closet points will be on the top .
+We apply a rule called majority count. 
+Then we decide the class label of neareat point. 
+
+While training the model make sure all data is on same scale , like some cols might be in percentages and some in decimals and some in whole numbers and some in floats , make sure all are aligned with only 1 unit of measurement
+If we dont use same scale , the distance will be calculated inaccurately as one metric will dominate on one side. 
+KNN can be worked in any dimensional data
+
+
+How to select K? Depends on data , 2 ways: 
+1) Heuristic approach : sqrt(n) , n- no of observations , aviod even value for k , cause we take k=4 and our query point lies around 2 points for class 0 and lies around 2 points for class 1 then we get conflict.
+2) Experimentation : cross validation : consider 1000 obs , 800 in train aqnd 200 in test , create diff knn models with k=1,2,3,4.... , then we train these knns on the train data and then use use the test data on the models and then find the accuracy scores.
+                    and select that model whos accuracy score is highest.
+
+Decision Surface / Boundary : Tool to understand the perfomance of classification algorithm.
+We can use it any classifciation model
+How to generate it? Plot your training data , cal range of data on x and y axis , for the whole range generate numppy meshgrid , then we train our knn using the data and then send our data into the model and encode 0 with orange and 1 with blue , then plot these as 
+pixels on the graph. 
+
+Library : mlxtend to plot this decision surface.
+
+
+Overfitting anf Underfitting in KNN
+
+cgpa| iq| placed : have data for 200 students , if k=1 , then the querys class will be the nearest neighbours class. Sometimes the query pointmustbe in blue but since its nearest point is pink it might be predicted as pink. 
+Overfitting : data has high variance , different o/p on different data .
+
+
+Underfitting: what is the max value of k = max val of n =200 , k=200 , and we get a query point and consider the 200 nearesit neighbours and then our whole data is considered, then the o/p will be the data which is dominated. of which has more no of data points either bl
+blue or pink. 
+
+K= low --> Overfitting
+K= high -> Underfitting
+
+Need to find intermediate value through experimentation 
+
+
+Limitations of KNN:
+
+Failure cases:
+-> When we have lage datasets. n=5 lakh and features =100
+   KNN is a lazy leanring technique , during traning no work and all work at prediction phase.
+
+-> High dimensional data : Features =500 , curse of dimensionality , distance concept is not reliable.
+
+-> KNN doesnt work well with outliers
+
+-> Non homogenous scales : different units of measurements : one feature dominates the other then while calculating distance its not reliale
+
+-> Imbalanced dataset : When only 1 o/p data points are dominated and biased
+
+-> Using KNN for inference and not for prediction :  it acts like a black box model , it can say which feature is more important to predict the output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
